@@ -1,4 +1,3 @@
-theme: jekyll-gitbook
 # Configurations
 title:            Jekyll Gitbook
 longtitle:        Jekyll Gitbook
@@ -11,7 +10,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://gracesjy.github.io/hp/'
-baseurl:          ''
+baseurl:          'https://gracesjy.github.io/hp/'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
