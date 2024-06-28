@@ -6,4 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-This is an contact page.
+## Contact
+
+E-mail : gracesjy@naver.com
+
