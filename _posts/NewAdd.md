@@ -8,6 +8,7 @@ layout: post
 
 I am studying how to add ....
 
+NEW ADD .md
 
 ```yaml
 toc:
