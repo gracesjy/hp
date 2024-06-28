@@ -10,8 +10,6 @@ layout: post
 
 I have been passionate about being a software developer for a long time, and I will continue to do so.
 
-![raymond.jpg](../assets/raymond.jpg)
-
 ![raymond.jpg](../../assets/raymond.jpg)
 
 ## Brief History ..
@@ -26,7 +24,7 @@ a semiconductor company.  After that, I developed OPC-UA products until the end 
 and am currently developing my product, Big Data Analysis Enabler.
 
 ## Familiar programming language
-UNIX at first, It started with C/C++ as the base, and later changed to JAVA.  (2010)
+UNIX at first, It started with C/C++, ACE+TAO frameworks, ... as the base, and later changed to JAVA.  (2010 ~)
 Starting with Big Data projects, I was interested in Python and R, and also dealt with PySpark and Scala.  Currently, I am doing C/C++/Python/R for my product.
 
 The language I am most interested in is Python.
