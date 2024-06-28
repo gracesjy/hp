@@ -13,29 +13,26 @@ Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https:/
 
 [![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
 
-## Big Data Analysis Enabler ..
+## Big Data Analysis Enabler for Oracle Database
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+This is my personal product.  It is an Oracle In-Database product used with Oracle Database Instance, 
+and you can run Python and R as SQL statements and receive the results like regular SQL results.
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
+[![Big Data Analysis Enabler](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)]([https://github.com/gracesjy/bdae])
+
+Although I cannot dare to compare it with Oracle R Enterprise, we were only able to implement a few important parts, 
+such as parallel and distributed processing.
+
+It was developed first as a Python module, and it is more complete than R and is very easy to install because of Anaconda.
+The implementation consists of C/C++, Oracle PL/SQL, Function, Type, View, etc.
 
 ## OPC-UA with prosys SDK
 
-This theme can be used just as other [Jekyll themes][1] and support [remote theme][12],
-see [the official guide][13] as well.
-
-You can introduce this jekyll theme into your own site by either
-
-- [Fork][3] this repository and add your markdown posts to the `_posts` folder.
-- Use as a remote theme in your [`_config.yml`][14](just like what we do for this
-  site itself),
+This is an implementation of OPC-UA, an international standard protocol for IOT.  
+It is no different from making and delivering it alone. Originally, open source from the Eclipse Milo project was used, 
+but delivery of this open source was difficult due to insufficient implementation of important Alarm and Event parts.
+So I implemented it using prosys.   PLC communication is also very clean and verified because it uses commercial products.  
+For reference, it is implemented in JAVA.
 
 ```yaml
 remote_theme: sighingnow/jekyll-gitbook
