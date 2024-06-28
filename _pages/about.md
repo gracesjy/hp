@@ -12,6 +12,8 @@ I have been passionate about being a software developer for a long time, and I w
 
 ![raymond.jpg](../assets/raymond.jpg)
 
+![raymond.jpg](../../assets/raymond.jpg)
+
 ## Brief History ..
 In the mid-to-late 1990s, I developed various programs such as Oracle Tuxedo, Oracle Database, UNIX Network/System Programming, 
 and Windows Win32/MFC programming. In the early 2000s, I developed CTI and Telematics. 
