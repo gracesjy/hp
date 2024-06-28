@@ -10,7 +10,7 @@ layout: post
 
 I have been passionate about being a software developer for a long time, and I will continue to do so.
 
-![raymond.jpg](../assets/raymond.png)
+![raymond.jpg](../assets/raymond.jpg)
 
 ## Brief History ..
 In the mid-to-late 1990s, he developed various programs such as Oracle Tuxedo, Oracle Database, UNIX Network/System Programming, 
