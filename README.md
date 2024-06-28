@@ -18,7 +18,7 @@ Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https:/
 This is my personal product.  It is an Oracle In-Database product used with Oracle Database Instance, 
 and you can run Python and R as SQL statements and receive the results like regular SQL results.
 
-[![Big Data Analysis Enabler](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)]([https://github.com/gracesjy/bdae])
+[![Big Data Analysis Enabler](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://github.com/gracesjy/bdae)
 
 Although I cannot dare to compare it with Oracle R Enterprise, we were only able to implement a few important parts, 
 such as parallel and distributed processing.
@@ -33,10 +33,6 @@ It is no different from making and delivering it alone. Originally, open source 
 but delivery of this open source was difficult due to insufficient implementation of important Alarm and Event parts.
 So I implemented it using prosys.   PLC communication is also very clean and verified because it uses commercial products.  
 For reference, it is implemented in JAVA.
-
-```yaml
-remote_theme: sighingnow/jekyll-gitbook
-```
 
 ### Python Deep Learning with Django
 
