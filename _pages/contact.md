@@ -6,7 +6,6 @@ category: Jekyll
 layout: post
 ---
 
-## Contact
 
 E-mail : gracesjy@naver.com
 
