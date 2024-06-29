@@ -6,9 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-## About Me
-
-I have been passionate about being a software developer for a long time, and I will continue to do so.
+I have been passionate about being a software developer for a long(?) time, and I will continue to do so.
 
 ![raymond.jpg](../../assets/raymond.jpg)
 
