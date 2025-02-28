@@ -10,16 +10,11 @@ I have been passionate about being a software developer for a long(?) time, and 
 
 ![raymond.jpg](../../assets/raymond.jpg)
 
-## Brief History ..
+### Brief History ..
 
 
-## Familiar programming language
+### Embedded with AI
 
+### AI with Oracle Database
 
-## Familiar Database
-
-
-## Embedded ..
-
-
-## Where to go 
+### Where to go 
