@@ -1,3 +1,11 @@
+---
+title: Example 
+author: Raymond
+date: 2024-07-02
+category: Jekyll
+layout: post
+---
+
 ## Analysis Output - One SQL
 
 Oracle BLOB, CLOB, VARCHAR2, NUMBER ...
