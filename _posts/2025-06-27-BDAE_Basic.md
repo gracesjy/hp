@@ -1,5 +1,5 @@
 ---
-title: BDAE_Basic 
+title: BDAE Basic
 author: Raymond
 date: 2024-07-03
 category: Jekyll
