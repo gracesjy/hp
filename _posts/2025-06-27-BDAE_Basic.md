@@ -9,7 +9,7 @@ layout: post
 ## <span style="color:blue">About BDAE ...</span>
 
 <span style="color:blue">BDAE</span> 는
-<span style="color:red">Oracle R Enterprise</style></span> 와 같이 <span style="color:blue">Oracle In-Database API</span> 를 사용했기 때문에 Oracle Database 와 관련 있는 <br>
+<span style="color:red">Oracle R Enterprise</span> 와 같이 <span style="color:blue">Oracle In-Database API</span> 를 사용했기 때문에 Oracle Database 와 관련 있는 <br>
 <span style="color:blue">아키텍처는 동일하며</span>, 시스템 측면의 기본 설정 및 환경은 모두 동일하다. <br>
 
 1) 분석 코드를 DB 에 등록 해서 사용한다.  이 분석 코드는 재활용된다.(Register Analysis Codes into DB)<br>
