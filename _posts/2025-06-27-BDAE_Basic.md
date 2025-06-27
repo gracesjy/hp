@@ -26,6 +26,8 @@ layout: post
 from IPython.display import Image
 Image('/home/oracle/Pictures/ORE_China1.png')
 ```
+<img src="../assets/01.basic_files/01.basic_2_0.png" width="50%" height="50%">
+
 <img src="./01.basic_files/01.basic_2_0.png" width="50%" height="50%">
 ![png](01.basic_files/01.basic_2_0.png)
     
