@@ -11,8 +11,6 @@ Raymond Development areas of interest !
 This is my personal product.  It is an Oracle In-Database product used with Oracle Database Instance, 
 and you can run Python and R as SQL statements and receive the results like regular SQL results.
 
-[![Big Data Analysis Enabler](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://github.com/gracesjy/bdae)
-
 Although I cannot dare to compare it with Oracle R Enterprise, we were only able to implement a few important parts, 
 such as parallel and distributed processing.
 
