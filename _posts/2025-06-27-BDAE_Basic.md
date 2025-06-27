@@ -17,7 +17,7 @@ layout: post
 3) 병렬 분산 처리를 수행한다.  이때 분석 코드는 관여하지 않고, Oracle Database 의 병렬 분산 처리를 이용한다.<br>
    (Use Oracle Parallelism.)
 
-### <span style="color:red">Oracle R Enterprise </span>
+## <span style="color:red">Oracle R Enterprise </span>
 
 매우 비싼 상용 분석 툴이며, 중국에서도 이 관련 서적을 찾아볼 수 있다.
 
@@ -26,11 +26,6 @@ layout: post
 from IPython.display import Image
 Image('/home/oracle/Pictures/ORE_China1.png')
 ```
-
-
-
-
-    
 ![png](01.basic_files/01.basic_2_0.png)
     
 
