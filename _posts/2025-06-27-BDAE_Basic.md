@@ -22,71 +22,14 @@ layout: post
 매우 비싼 상용 분석 툴이며, 중국에서도 이 관련 서적을 찾아볼 수 있다.
 
 
-```python
-from IPython.display import Image
-Image('/home/oracle/Pictures/ORE_China1.png')
-```
-<img src="../assets/01.basic_files/01.basic_2_0.png" width="50%" height="50%">
+<img src="../assets/01.basic_files/01.basic_2_0.png" width="100%" height="100%">
 
-<img src="./01.basic_files/01.basic_2_0.png" width="50%" height="50%">
-![png](01.basic_files/01.basic_2_0.png)
-    
+<img src="../assets/01.basic_files/01.basic_3_0.png" width="100%" height="100%">
 
-
-
-
-```python
-Image('/home/oracle/Pictures/ORE_China2.png')
-```
-
-
-
-
-    
-![png](01.basic_files/01.basic_3_0.png)
-    
-
-
-
-
-```python
-Image('/home/oracle/Pictures/ORE_rqEval.png')
-```
-
-
-
-
-    
-![png](01.basic_files/01.basic_4_0.png)
-    
-
-
-
-
-```python
-Image('/home/oracle/Pictures/ORE_rqTableEval.png')
-```
-
-
-
-
-    
-![png](01.basic_files/01.basic_5_0.png)
-    
-
-
-
-
-```python
-Image('/home/oracle/Pictures/ORE_rqGroupEval_rqRowEval.png')
-```
-
-
-
-
-    
-![png](01.basic_files/01.basic_6_0.png)
-    
+<img src="../assets/01.basic_files/01.basic_4_0.png" width="100%" height="100%">    
+<img src="../assets/01.basic_files/01.basic_5_0.png" width="100%" height="100%">    
+<img src="../assets/01.basic_files/01.basic_6_0.png" width="100%" height="100%">    
+   
 
 
 
