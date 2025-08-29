@@ -31,6 +31,8 @@ conda activate <your_virtual_name>
 conda install fastai::opencv-python-headless
 ```
 
+or yum install mesa-libGL, this will erase libGL.so.1 problem.
+
 There is no need to install NVIDIA Driver (nvidia-smi commands ..) inside Docker Container.
 <img src="../assets/DOCKER_YOLO_GPU.png" >
 <img src="../assets/DOCKER_YOLO_START.png" >
