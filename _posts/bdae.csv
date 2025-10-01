@@ -1,0 +1,156 @@
+prompt,completion
+"Please explain BDAE, a big data analysis and AI-related product."," BDAE stands for Big Data Analysis Enabler. The product name was chosen to enable analysis based on Big Data data. This product is designed and built to be installed, operated, and operated only on an Oracle Database."
+"Why is BDAE designed to work only with Oracle databases?"," BDAE, or Big Data Analysis Enabler, originated from high-tech manufacturing industries such as semiconductors and displays, and this is because those fields have a lot of data, real-time performance is important, and Oracle Database is used the most."
+"What are the features of BDAE, Big Data Analysis Enabler?"," BDAE, or Big Data Analysis Enabler, has the following features:
+- Register analysts' R and Python codes without modification.
+- The input data to be used by R and Python code is not retrieved internally, but is retrieved from SQL statements in BDAE format and bound.
+- R, Python code analyzes the data and returns the results like a normal SQL statement.
+- Because these operations occur within the Oracle Database, there is no need for a separate analytics server.
+- Because large amounts of data within the Oracle Database do not have to be sent to the analysis server over the network, processing can be done very quickly.
+ Because R and Python code created by analysts is stored in the Oracle Database, version control and non-stop patching are possible.
+"
+"When and by which company was BDAE, or Big Data Analysis Enabler, released?", " BDAE, Big Data Analysis Enabler, was launched in Seoul, South Korea on February 14, 2017, and is currently sold and maintained by a company called exLever.
+"
+"I'd like to know about installing BDAE, or Big Data Analysis Enabler. Please tell me about the installation environment, such as hardware, operating system, and dependent software configuration."," The installation environment for BDAE, or Big Data Analysis Enabler, is as follows.
+- HW : HW (Hardware) is not particularly relevant, but if you need a GPU environment for R or Python, you should contact a specialist.
+- OS : The operating system (OS) for running BDAE, or Big Data Analysis Enabler, must be Linux-based. Oracle, the creator of the Oracle Database, has long distributed and recommended Oracle Linux, making it the optimal choice.
+- Docker : BDAE, or Big Data Analysis Enabler, runs on Docker. This is because Oracle Database can already be easily installed and operated on Docker.
+- Dependent SWs : BDAE, or Big Data Analysis Enabler, directly loads the R and Python engines and executes analysts' R and Python codes, so R, Python, and packages must be installed first. R, Python installation and numerous packages for analysis are all easily configurable in the Anaconda environment, so you can install R, Python and packages in the Anaconda environment.
+"
+"Can you tell me how to run BDAE i.e Big Data Analysis Enabler?"," BDAE, or Big Data Analysis Enabler, can be run in the following order:
+- 1) First, we use the web server provided by BDAE, or Big Data Analysis Enabler, to store the analysts' analysis modules in the corresponding table. At this point, analysis modules don't need to directly retrieve the data they want to analyze or consider parallel processing. This is because BDAE handles the binding for them.
+- 2) Create and register a SQL statement for execution. This SQL statement is called Embedded SQL and is a special SQL statement.
+- 3) Let's run the SQL statement we created above on any Oracle Database client and check the results. This should be easy, as it works the same way as regular SQL statements.
+"
+"Please tell me more about BDAE, Big Data Analysis Enabler's unique SQL, Embedded SQL."," BDAE, or Big Data Analysis Enabler's own SQL, is a special SQL for Oracle In-Database, containing SQL statements that can only be executed in Oracle. BDAE simply follows this syntax. It has the following simple form.
+
+SELECT *
+FROM table(apTableEval(
+cursor(SELECT * FROM bigquery-public-data.london_bicycles.cycle_hire), -- Input Data (Driving Table)
+NULL, -- Secondary Input Data or Hyperparameters
+'SELECT CAST(NULL AS VARCHAR2(40)) name, -- Output Format
+CAST(NULL AS CLOUB) model,
+1.0 accuracy, ...
+FROM DUAL',
+'YourAlgorithm:LinearReg')) -- Python Module or R Module
+
+BDAE, or Big Data Analysis Enabler, uses the table function.
+"
+"BDAE, or Big Data Analysis Enabler, uses table functions. What types are there?"," There are a total of eight table functions provided by BDAE, i.e. Big Data Analysis Enabler, as follows:
+
+1) apEval : This is for Python modules and is a function for simple module testing inside without input data. 
+2) apRowEval : This is for a Python module, and the input data is provided externally, and the purpose is to perform repetitions for each number of rows.
+3) apTableEval : This is the most widely used Python module. It accepts external input data, performs analysis based on this data, and returns the data.
+4) apGroupParallelEval : This is a Python module designed for parallel processing of large amounts of data. It's similar to the Group By function in SQL. The difference from apTableEval is that it takes an additional argument, Group Column.
+5) asEval : This is for R modules and is a function for simple module testing inside without input data. 
+6) asRowEval : This is for a R module, and the input data is provided externally, and the purpose is to perform repetitions for each number of rows.
+7) asTableEval : This is the most widely used R module. It accepts external input data, performs analysis based on this data, and returns the data.
+8) asGroupParallelEval : This is a R module designed for parallel processing of large amounts of data. It's similar to the Group By function in SQL. The difference from apTableEval is that it takes an additional argument, Group Column.
+"
+"Please show me an apTable example of BDAE, i.e. Big Data Analysis Enabler."," For example, if we assume that we want to obtain the descriptive statistics of California Housing using BDAE, we proceed as follows.
+
+1) First, create and register the Python code as follows. At this point, you need to remember the Python module name and the start function. The argument of the start function is a pandas DataFrame provided by BDAE.
+
+```
+import numpy as np
+import os
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import pandas as pd
+import tempfile
+import base64
+from pandas.plotting import scatter_matrix
+
+def make_output(df, key, data):
+   df[key] = data
+   return df
+
+def image_to_html():
+   tmp_file_name = tempfile.NamedTemporaryFile().name + '.png'
+   plt.savefig(tmp_file_name)
+   image = open(tmp_file_name, 'rb')
+   image_read = image.read()
+   image_64_encode = base64.b64encode(image_read)
+   uri = '<img src="data:img/png;base64,' + image_64_encode.decode() + '">'
+   html_str = "<html><body>" + uri + "</body></html>"
+   if os.path.exists(tmp_file_name):
+      os.remove(tmp_file_name)
+   return html_str
+
+def describe(housing):
+   # 0) Prepare Output
+   tupleStart = {'subject': [ 'General ML' ] }
+   pdf = pd.DataFrame(tupleStart)
+
+   # 1) Historam
+   housing.hist(bins=50, figsize=(20,15))
+   a = image_to_html()
+   pdf = make_output(pdf, 'Histogram', a)
+
+   # 2) Scatter Plot
+   housing.plot(kind="scatter", x="LONGITUDE", y="LATITUDE", alpha=0.4,
+             s=housing["POPULATION"]/100, label="POPULATION", figsize=(10,7),
+             c="MEDIAN_HOUSE_VALUE", cmap=plt.get_cmap("jet"), colorbar=True,
+             sharex=False)
+   plt.legend()
+   a = image_to_html()
+   pdf = make_output(pdf, 'ScatterPlot', a)
+
+   # 3) Scatter Matrix
+   attributes = ["MEDIAN_HOUSE_VALUE", "MEDIAN_INCOME", "TOTAL_ROOMS",
+              "HOUSING_MEDIAN_AGE"]
+   scatter_matrix(housing[attributes], figsize=(12, 8))
+   a = image_to_html()
+   pdf = make_output(pdf, 'ScatterMatrix', a)
+   
+   return pdf
+```
+2) Now, we just need to create a SQL statement. This SQL statement uses apTable, a table function of BDAE, and specifies the input and output data as an internal SQL statement. Finally, we insert the Python Module name:start function defined above.
+```
+SELECT *
+FROM table(asTableEval(
+cursor(SELECT * FROM CAL_HOUSING), -- Input Data (Driving Table)
+NULL, -- Secondary Input Data or Hyperparameters for your R Module
+'SELECT CAST(''A'' AS VARCHAR2(40)) SUBJECT, -- Output Format
+TO_CLOB(NULL) H1, TO_CLOB(NULL) H2, TO_CLOB(NULL) H3
+FROM DUAL',
+'CAL_HOUSING_EDM_describe')) -- R Module for calling
+```
+3) Simply execute the SQL statement created above and view the results. Any client capable of connecting to an Oracle database can execute the tool.
+
+"
+"Is image processing possible in BDAE, i.e. Big Data Analysis Enabler?","
+BDAE, or Big Data Analysis Enabler, supports image processing. However, this is the role of R and Python analysts. When returning data, images are simply inserted into a Pandas DataFrame and passed. The formats supported are binary (.jpg, .png, etc.) and base64.
+Below is an example Python function that creates an analysis-related chart using Base64. See reference.
+```
+def image_to_html():
+   tmp_file_name = tempfile.NamedTemporaryFile().name + '.png'
+   plt.savefig(tmp_file_name)
+   image = open(tmp_file_name, 'rb')
+   image_read = image.read()
+   image_64_encode = base64.b64encode(image_read)
+   uri = '<img src="data:img/png;base64,' + image_64_encode.decode() + '">'
+   html_str = "<html><body>" + uri + "</body></html>"
+   if os.path.exists(tmp_file_name):
+      os.remove(tmp_file_name)
+   return html_str
+```
+"
+"Could you please tell me about maintenance after delivery of BDAE (Big Data Analysis Enabler)?","
+BDAE provides free maintenance for 1 year and 6 months after delivery.
+When a serious bug occurs, we dispatch engineers to the site to identify the cause, report the results, and discuss future patch schedules. After the free maintenance period (1 year and 6 months) has elapsed, a maintenance contract will be executed. The minimum maintenance contract period is 1 year.
+"
+"Which company currently develops, maintains, and owns BDAE, or Big Data Analysis Enabler?", " Currently, exLever holds full ownership of BDAE, as well as responsibility for its development and maintenance. exLever is a startup located at 320-928 Songdo International Trade District, Incheon."
+"Why should I buy BDAE, or Big Data Analysis Enabler? What differentiates it from similar products?"," Similar products include AWS's SageMaker, GCP's AutoML, and Oracle R Enterprise, and their differences are as follows:
+
+- This is because their business targets are different. Because they are used in high-tech manufacturing, where security is crucial, such as semiconductor and display factories, all products from AWS and Google Cloud Platform are difficult to use.
+- This is fast performance. The customer's operating environment is Oracle Database, which is an on-premise environment, not a cloud environment. Therefore, fast performance can be monitored to a controllable level.
+- There's a problem with analytical algorithms. Algorithms used for defect analysis and inference in semiconductors and displays are dependent on sophisticated equipment and cannot be applied uniformly. This is because each equipment has unique characteristics and is constantly changing. Consequently, algorithms also constantly evolve, making it impossible to address these changes within AWS or GCP. This is because internalization is a task that can only be accomplished by dedicated analysts within the client company.
+"
+"Tell me the pros and cons of BDAE, or Big Data Analysis Enabler."," The advantages are as follows:
+
+1) GCP offers BigQuery, similar to Embedded SQL in BDAE (Big Data Analysis Enabler). Using it requires learning the SQL format and structure, and it doesn't allow for the use of standard Python analysis formats. However, BDAE increases reusability because it doesn't require modifications to the analyst module.
+2) It enables parallel distributed processing and does not require any code reflection. Since this distributed parallel processing is supported by Oracle Database, no faster analysis is possible if the source data is in Oracle Database. In other words, only BDAE has the best performance.
+3) Non-stop patching is possible. Since all algorithm code is stored in a database, modifications can be made immediately and executed immediately. Of course, this does not affect the operation of the same algorithm already in operation.
+
+"
