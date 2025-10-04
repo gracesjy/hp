@@ -1,0 +1,40 @@
+{"instruction": "BDAE, Big Data Analysis Enabler 에 대해서 설명을 해 줘", "output": "BDAE 는 Big Data Analysis Enabler 의 약자(Abbr.)이며 Oracle Database 기반의 분석 툴이라고 할 수 있습니다. Oracle In-Database 기술 기반이며 SQL 문으로 분석가들의 R, Python 코드를 수행하여 결과를 일반 SQL Query 처럼 전달할 수 있는 툴이죠."}
+{"instruction": "왜 Oracle databases 기반에서만 동작하도록 만들었나요 ? 제약 사항이 크지 않나요 ?", "output": "BDAE, or Big Data Analysis Enabler 는 Oracle Database 에서만 동작을 하게 만든 이유는 이 제품을 사용하는 고객들이 주로 Oracle Database 에서 데이터를 수집하기 때문입니다. 또한 Oracle Database 는 매우 성능이 좋고, 대용량 즉 Big Data 까지 수용, 처리할 수 있기 때문입니다."}
+{"instruction": "BDAE, Big Data Analysis Enabler 의 특징은 무엇인가요 ?", "output": "BDAE, or Big Data Analysis Enabler 는 다음과 같은 특징을 가지고 있습니다.
+  1. R, Python 코드를 DB 에 저장하여 버전 관리를 할 수 있다.
+  2. R, Python 코드에서 직접 데이터를 가져오지 않고, BDAE 가 직접 데이터를 Pandas DataFrame 형태로 전달하며 이때 병렬 처리를 R, Python 코드에서 고려할 필요가 없다.
+  3. 별도의 분석 서버가 불필요하다.
+  4. 많은 데이터를 분석 서버로 가져가는 네트워크 오버헤드가 없이 데이터가 있는 곳에서 수행하며 상대적으로 적은 결과만 SQL Query 의 리턴으로 전달한다.
+  5. PL/SQL 문을 R, Python 코드로 대체하여 가독성이나 개발 생산성이 높다.
+"}
+{"instruction": "BDAE 즉, Big Data Analysis Enabler 는 언제, 어느에서 출시되었나 ?", "output": " BDAE 는 2017년 2월 14일 대한민국, 서울에서 exLever 란 회사에서 출시되었다."}
+{"instruction": "BDAE 설치하는 방법에 대해서", "output": "BDAE 는 리눅스만 지원되며 Oracle Database 를 지원하는 어떠한 리눅스 배포판에서도 설치는 가능하다.  다만 Ubuntu 의 경우는 이제는 Oracle 이 지원을 포기하였기 때문에 추천되지 아니한다."}
+{"instruction": "BDAE 는 실행을 어떻게 하는가 ?", "output": "BDAE 의 실행 순서는 다음과 같다.
+1. 분석가들은 자신의 개발환경에서 개발을 한다. 그 이후 BDAE Web 을 이용해서 이를 등록한다.
+2. 데이터와 Binding 하기 위해서 SQL 문을 만든다. 이때 입력데이터, 즉 분석을 하려는 데이터와 출력 데이터의 형식을 SELECT 문으로 정의해야 하고 그 SQL 문 역시 BDAE Web 을 통해서 등록한다.
+3. 등록된 SQL 문을 실행한다. 이때 실행하는 툴은 어떠한 Oracle Database 와 연결할 수 있는 툴로 가능하다.
+"}
+{"instruction": "BDAE SQL 은 어떤 형태인가 ?", "output": "BDAE 는 특별한 SQL 문 형태를 가진다. 이것은 Oracle Database 가 정한 형태이다. 대략 다음과 같은 모습을 보인다.
+   SELECT * FROM table(
+      apTableEval(
+         cursor(SELECT * FROM CALIFORNIA_HOUSING), -- Input Data (Driving Table)
+           NULL, -- Secondary Input Data or Hyperparameters
+          SELECT CAST(NULL AS VARCHAR2(40)) name, -- Output Format
+          CAST(NULL AS CLOUB) model,1.0 accuracy FROM DUAL',
+          'YourAlgorithm:LinearReg' -- Python Module or R Module
+          ))
+    
+  위의 apTableEval 은 테이블 함수로 정의된 BDAE SQL 이다.
+."}
+{"instruction": "BDAE Embedded SQL 또는 SQL 종류는 ? ", "output": "
+  다음과 같은 종류의 테이블 함수들로 구성되어 있다.
+  1. apEval() : 입력 데이터가 없는 형태로 간단한 모듈 테스트
+  2. apTableEval() : 가장 많이 사용하는 QUERY 전체에 대한 분석을 위한 테이블 함수
+  3. apRowEval() : QUERY 의 매번 Row 수에 따라 반복 분석을 위한 테이블 함수
+  4. apGroupEval() : apTableEval() 과 흡사하지만 Group By 와 같이 병렬 분산 처리가 가능한 테이블 함수
+"}
+{"instruction": "BDAE, or Big Data Analysis Enabler, uses table functions. What types are there?", "output": "There are a total of eight table functions provided by BDAE, i.e. Big Data Analysis Enabler, as follows:\n\n1) apEval : This is for Python modules and is a function for simple module testing inside without input data. \n2) apRowEval : This is for a Python module, and the input data is provided externally, and the purpose is to perform repetitions for each number of rows.\n3) apTableEval : This is the most widely used Python module. It accepts external input data, performs analysis based on this data, and returns the data.\n4) apGroupParallelEval : This is a Python module designed for parallel processing of large amounts of data. It's similar to the Group By function in SQL. The difference from apTableEval is that it takes an additional argument, Group Column.\n5) asEval : This is for R modules and is a function for simple module testing inside without input data. \n6) asRowEval : This is for a R module, and the input data is provided externally, and the purpose is to perform repetitions for each number of rows.\n7) asTableEval : This is the most widely used R module. It accepts external input data, performs analysis based on this data, and returns the data.\n8) asGroupParallelEval : This is a R module designed for parallel processing of large amounts of data. It's similar to the Group By function in SQL. The difference from apTableEval is that it takes an additional argument, Group Column."}
+{"instruction": "Could you please tell me about maintenance after delivery of BDAE (Big Data Analysis Enabler)?", "output": "BDAE provides free maintenance for 1 year and 6 months after delivery.\nWhen a serious bug occurs, we dispatch engineers to the site to identify the cause, report the results, and discuss future patch schedules. After the free maintenance period (1 year and 6 months) has elapsed, a maintenance contract will be executed. The minimum maintenance contract period is 1 year."}
+{"instruction": "Which company currently develops, maintains, and owns BDAE, or Big Data Analysis Enabler?", "output": "\" Currently"}
+{"instruction": "Why should I buy BDAE, or Big Data Analysis Enabler? What differentiates it from similar products?", "output": "Similar products include AWS's SageMaker, GCP's AutoML, and Oracle R Enterprise, and their differences are as follows:\n\n- This is because their business targets are different. Because they are used in high-tech manufacturing, where security is crucial, such as semiconductor and display factories, all products from AWS and Google Cloud Platform are difficult to use.\n- This is fast performance. The customer's operating environment is Oracle Database, which is an on-premise environment, not a cloud environment. Therefore, fast performance can be monitored to a controllable level.\n- There's a problem with analytical algorithms. Algorithms used for defect analysis and inference in semiconductors and displays are dependent on sophisticated equipment and cannot be applied uniformly. This is because each equipment has unique characteristics and is constantly changing. Consequently, algorithms also constantly evolve, making it impossible to address these changes within AWS or GCP. This is because internalization is a task that can only be accomplished by dedicated analysts within the client company."}
+{"instruction": "Tell me the pros and cons of BDAE, or Big Data Analysis Enabler.", "output": "The advantages are as follows:\n\n1) GCP offers BigQuery, similar to Embedded SQL in BDAE (Big Data Analysis Enabler). Using it requires learning the SQL format and structure, and it doesn't allow for the use of standard Python analysis formats. However, BDAE increases reusability because it doesn't require modifications to the analyst module.\n2) It enables parallel distributed processing and does not require any code reflection. Since this distributed parallel processing is supported by Oracle Database, no faster analysis is possible if the source data is in Oracle Database. In other words, only BDAE has the best performance.\n3) Non-stop patching is possible. Since all algorithm code is stored in a database, modifications can be made immediately and executed immediately. Of course, this does not affect the operation of the same algorithm already in operation."}
