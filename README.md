@@ -7,10 +7,16 @@ permalink: /
 Raymond 개발 관심 분야 !
 
 ## Big Data Analysis Enabler(BDAE) for Oracle Database
+#1. 개요
+이것은 홀로 기획하고, 개발한 개인 작품입니다.<br>
+Oracle R Enterprise 라는 처음 접했을 때
 
-이것은 개인 제품입니다.  과거 하이테크 제조 분야의 머신러닝을 분석가들과 함께 할 때 Hadoop 및 오픈소스 RDBMS 작업을 하면서 느낀 바가 있어 실제 운영에 많이 사용되는 Oracle Database 에서 데이터 이동 없이 실시간으로 AI 작업들 (Machine Learning, Deep Learning, Inference 등)을 하는 것이 어떨까 하는 바램에 틈틈이 오랜 시간을 거쳐서 만든 것입니다.<br>
+#2. 활용
+
+<br>
 
 이것은 Oracle R Enterprise 를 고객사의 분석가들과 함께 검토하면서 시작된 것으로 다음의 문제점을 보완하기 위해서 만들기 시작했습니다.
+
     1. R 보다, Python 이 되었으면 한다.
     2. 많은 알고리즘보다, 개발한 알고리즘을 쉽게 넣고 커스터마이징 할 수 있었으면 한다.
     3. 간단하게 알고리즘을 생성,저장,변경 등을 할 수 있는 GUI 가 제공되었으면 한다.
