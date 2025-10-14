@@ -25,7 +25,7 @@ Oracle In-Database 기술을 사용하기 때문에 일반적이 어플리케이
 
 ### 💡 활용
 BDAE 는 단지 AI 업무(ML,DL,..)만을 목적으로 하지 않습니다.  기존 PL/SQL 등을 Python 으로 작성하거나, 백앤드의 여러 번의 DB Call 을 Python, R 등으로 한번으로 처리하는 등의 작업을 손쉽게 합니다.<br>
-Big Data Analysis Enabler (BDAE) 는 개발 당시의 배경을 암시합니다.  Oracle Database 나 Exadata 는 Big Data 를 핸들링하는데 부족함은 없습니다.  ROI 도 왠만한 오픈소스 보다 낫습니다. 인건비가 가자 큰 비용이기 때문입니다.<br>
+Big Data Analysis Enabler (BDAE) 는 개발 당시의 배경을 암시합니다.  Oracle Database 나 Exadata 는 Big Data 를 핸들링하는데 부족함은 없습니다.  ROI 도 왠만한 오픈소스 보다 낫습니다. 인건비가 가장 큰 비용이기 때문입니다.<br>
 <br>
 PL/SQL 문이나 Table 함수를 Python, R 로 작성하여 Dynamic SQL 로 호출하면 개발 생산성이 매우 뛰어나며 유지보수성이 증가합니다.<br>
 
