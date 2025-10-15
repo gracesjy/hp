@@ -9,7 +9,7 @@ permalink: /
 ## ✅<span style="color:#034299"> Big Data Analysis Enabler(BDAE) for Oracle Database
 
 ### ✅<span style="color:#034299"> 개요
-이것은 개인 작품으로, Oracle Database 를 저장소 역할 이외에 R, Python 를 이용한 AI 작업 등과 PL/SQL, Function 등을 R, Python 으로 대체할 다목적인 용도로 만들어졌습니다.<br>
+이것은 개인 작품으로, Oracle Database 를 저장소 역할 이외에 R, Python 를 이용한 AI 작업 등과 PL/SQL, Function 등을 R, Python 으로 대체할 다목적인 용도로 만들어졌습니다. (본 제품은 상용 제품입니다.)<br>
 
 Oracle R Enterprise(ORE) 개념 자체에 큰 영향을 받았지만, 실질적으로 Oracle Database 관련 API 사용한 것을 빼면 전혀 관계는 없습니다.
 <br>
@@ -36,7 +36,7 @@ R 역시 Anaconda 에서 가상화 환경에서 설치가 가능해서 통합적
 
 ## ✅<span style="color:#034299"> OPC-UA with Prosys SDK
 
-이 제품은 개인 제품으로, JAVA 로 구현된 IOT 분야의 국제 프로토콜인 OPC-UA 를 상용 SDK 인 Prosys 사의 JAVA OPC-UA SDK 및 PLC 라이브러리로 만든 OPC-UA Server 입니다.<br><br>
+이 제품은 개인 제품으로, JAVA 로 구현된 IOT 분야의 국제 프로토콜인 OPC-UA 를 상용 SDK 인 Prosys 사의 JAVA OPC-UA SDK 및 PLC 라이브러리로 만든 OPC-UA Server 입니다. (본 제품은 상용 제품입니다.)<br><br>
 Eclipse Milo 프로젝트의 OPC-UA Server SDK 를 가지고 최초 버전을 만들었지만, Alarm & Condition 기능 등이 아직 구현이 안되어 상용 제품(Prosys)을 사용했으며, 또한 다양한 PLC 들에 대한 대응도 역시 상용 제품을 사용했습니다.<br>
 
 OPC-UA Server 를 제공하지 않는 다양한 제조 장비, 부가 장비들을 산업 표준의 OPC-UA 프로토콜을 가능케 하고 Data Access, Historical Data, Event, Alarm & Condition 등의 OPC-UA 의 기본 기능을 충실하게 가능케 합니다. <br><br>
