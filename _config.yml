@@ -64,3 +64,8 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+
+fontsettings:
+  theme: night   # 또는 sepia
+  family: sans   # serif 또는 sans 중 선택
+  size: 2        # 0~4 사이 숫자
