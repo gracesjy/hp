@@ -14,8 +14,8 @@
             },
             "fontsettings": {
                 "family": "sans",
-                "size": 2,
-                "theme": "sepia"
+                "size": 1,
+                "theme": "night"
             },
             "highlight": {},
             "livereload": {},
