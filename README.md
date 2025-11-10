@@ -3,25 +3,14 @@ layout: home
 title: Raymond Development areas of interest
 permalink: /
 ---
-본 사이트는 Raymond 의 개인 솔루션 및 관심있는 개발 및 프로토타입 등에 대한 것들을 게시하는 사이트입니다.
+This site is where Raymond posts his personal solutions, developments, and prototypes of interest. Most of these are things he's developed in his spare time, addressing areas he's felt were missing while working on numerous manufacturing-related projects.
 
-
-### ✅<span style="color:#034299"> Big Data Analysis Enabler(BDAE) for Oracle Database
-
-#### ✅<span style="color:#034299"> 개요
-이것은 개인 작품으로, Oracle Database 를 저장소 역할 이외에 R, Python 를 이용한 AI 작업 등과 PL/SQL, Function 등을 R, Python 으로 대체할 다목적인 용도로 만들어졌습니다. (본 제품은 상용 제품입니다.)<br>
-
-Oracle R Enterprise(ORE) 개념 자체에 큰 영향을 받았지만, 실질적으로 Oracle Database 관련 API 사용한 것을 빼면 전혀 관계는 없습니다.
-<br>
-BDAE 는 Python, R, JAVA 를 지원하고 R 의 경우 ORE 의 R 과 또 다릅니다.  BDAE 는 오픈소스 R 을, ORE 는 Oracle 자체적인 
-많은 수정이 이뤄진 Oracle R 엔진을 사용합니다. <br> 또한 BDAE 는 R 보다 Python 을 권장합니다.  그 이유는 여러분들이 아는 그대로입니다. <br><br>
-BDAE 는 ORE 처럼 알고리즘만 수행하는 목적으로 만든 것이 아니라, Oracle PL/SQL 및 Function 의 한계를 Python, R 등의 업무 중심의 언어로 극복하고 데이터의 이동없이 데이터의 변환 및 AI 작업을 SQL 문으로 실행하고 그 결과를 일반적인 SQL Query 로 받기 위한 가벼운 툴을 목표로 개발 했습니다.<br><br>
-
-Oracle In-Database 기술을 사용하기 때문에 일반적이 어플리케이션이 아니며 Shared Library(.so) 형태를 띄고 있고, Oracle Database 가 필요 시 자동으로 실행시켜 주는 형태이며, 개발 관련 예제가 거의 없기 때문에 만드는데 오랜 시간이 걸렸습니다.<br>
-
-구현 및 설치 구성은 Shared Library (C/C++ 기반), Oracle PL/SQL, Function, Type, View 등으로 구성되어 있으며 Embedded SQL 을 위한 별도의 테이블 함수를 제공합니다.<br><br>
-
-
+### ✅ AI for Factory Automation
+In foundries that produce a wide variety of products in small quantities, quickly achieving yields is crucial. There's a reason most semiconductor and display factories use Oracle Database. It's virtually the only database capable of collecting massive transactions without delay and making real-time decisions.<br>
+Because downloading massive amounts of data into an analytics system poses a challenge, it's necessary to immediately draw inferences using AI models already trained in the storage where the data is collected, and then determine lot movement based on those results. This requires an Oracle in-database solution, and for this purpose, we developed the Big Data Analysis Enabler.
+#### ✅ Big Data Analysis Enabler (BDAE)
+This is a personal project, and was created for multi-purpose use, such as replacing PL/SQL, Function, etc. with Python, R for AI work, etc., in addition to Oracle Database's role as a storage.<br>
+The purpose of this is to be able to immediately infer a model using data within the Oracle Database in the fastest way possible without moving data, as it is based on collected Oracle In-Database technology, and then to perform various data transformation tasks easily using Python, etc. and return them like general SQL results.
 
 #### 💡 활용
 BDAE 는 단지 AI 업무(ML,DL,..)만을 목적으로 하지 않습니다.  기존 PL/SQL 등을 Python 으로 작성하거나, 백앤드의 여러 번의 DB Call 을 Python, R 등으로 한번으로 처리하는 등의 작업을 손쉽게 합니다.<br>
