@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-## ✅ Using GPUs in Docker Containers
+### ✅ Using GPUs in Docker Containers
 
 When creating a Docker container, be sure to include --ipc=host . Otherwise, you will see an error during operation.
 ```
