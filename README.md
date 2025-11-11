@@ -6,8 +6,11 @@ permalink: /
 This site is where Raymond posts his personal solutions, developments, and prototypes of interest. Most of these are things he's developed in his spare time, addressing areas he's felt were missing while working on numerous manufacturing-related projects.
 
 ### 📂 AI for Smart Factory
-In Semiconductor Industry that produce a wide variety of products in small quantities, quickly achieving yields is crucial. There's a reason most semiconductor and display factories use Oracle Database. It's virtually the only database capable of collecting massive transactions without delay and making real-time decisions.<br>
-Because downloading massive amounts of data into an analytics system poses a challenge, it's necessary to immediately draw inferences using AI models already trained in the storage where the data is collected, and then determine lot movement based on those results. This requires an Oracle in-database solution, and for this purpose, we developed the Big Data Analysis Enabler.
+In Semiconductor Industry that produce a wide variety of products in small quantities, quickly achieving yields is crucial. There's a reason most Semiconductor and Display Factories use Oracle Database. It's virtually the only database capable of collecting massive transactions without delay and making real-time decisions.<br>
+Because downloading massive amounts of data into an analytics system poses a challenge, it's necessary to immediately draw inferences using AI models already trained in the storage where the data is collected, and then determine lot movement based on those results. This requires an Oracle in-database solution, and for this purpose, we developed the Big Data Analysis Enabler.<br>
+<img src="../assets/images/FAB_Core.png">
+Big Data Analysis Enabler can be used in most Manufacturing fields and Major component systems.
+
 #### ✅ Big Data Analysis Enabler (BDAE)
 This is a personal project, and was created for multi-purpose use, such as replacing PL/SQL, Function, etc. with Python, R for AI work, etc., in addition to Oracle Database's role as a storage.<br>
 The purpose of this is to be able to immediately infer a model using data within the Oracle Database in the fastest way possible without moving data, as it is based on collected Oracle In-Database technology, and then to perform various data transformation tasks easily using Python, etc. and return them like general SQL results.
