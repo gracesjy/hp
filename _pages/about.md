@@ -9,7 +9,8 @@ layout: post
 ### Tough Time, but Beautiful Time ~
 I have been working in IT for a long time. However, new technologies have always been pouring out, and I have been making efforts to apply them. It was a difficult but beautiful time. Is this the AI ​​era where we should stop worrying about how to and focus on what to ?
 
-<img src="../assets/images/raymond.jpg">
+<img src="https://gracesjy.github.io/hp/assets/images/raymond.jpg">
+
 
 
 
