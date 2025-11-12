@@ -6,8 +6,7 @@ permalink: /
 This site is where Raymond posts his personal solutions, developments, and prototypes of interest. Most of these are things he's developed in his spare time, addressing areas he's felt were missing while working on numerous manufacturing-related projects.
 
 ### 📂 AI for Smart Factory
-In Semiconductor Industry that produce a wide variety of products in small quantities, quickly achieving yields is crucial. There's a reason most Semiconductor and Display Factories use Oracle Database. It's virtually the only database capable of collecting massive transactions without delay and making real-time decisions.<br>
-Because downloading massive amounts of data into an analytics system poses a challenge, it's necessary to immediately draw inferences using AI models already trained in the storage where the data is collected, and then determine lot movement based on those results. This requires an Oracle in-database solution, and for this purpose, I developed the Big Data Analysis Enabler.<br><br><br>
+The integration of artificial intelligence in the smart factory sector is expected to become even more active in the future. Since high-tech manufacturing, such as semiconductors, often requires the use of Oracle Database, we developed a product based on this database. <br>
 
 <img src="./assets/images/FAB_Core.png">
 Big Data Analysis Enabler can be used in most Manufacturing fields and Major component systems.<br>
