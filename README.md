@@ -10,7 +10,7 @@ The integration of artificial intelligence in the smart factory sector is expect
 
 <img src="./assets/images/FAB_Core.png">
 
-Big Data Analysis Enabler can be used in most Manufacturing fields and Major component systems.<br>
+💡Big Data Analysis Enabler can be used in most Manufacturing fields and Major component systems. For more details on this, please see the side menu on the left.<br>
 
 #### ✅ Big Data Analysis Enabler (BDAE)
 This is a personal project, and was created for multi-purpose use, such as replacing PL/SQL, Function, etc. with Python, R for AI work, etc., in addition to Oracle Database's role as a storage.<br>
