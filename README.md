@@ -9,6 +9,7 @@ This site is where Raymond posts his personal solutions, developments, and proto
 The integration of artificial intelligence in the smart factory sector is expected to become even more active in the future. Since high-tech manufacturing, such as semiconductors, often requires the use of Oracle Database, we developed a product based on this database. <br>
 
 <img src="./assets/images/FAB_Core.png">
+
 Big Data Analysis Enabler can be used in most Manufacturing fields and Major component systems.<br>
 
 #### ✅ Big Data Analysis Enabler (BDAE)
