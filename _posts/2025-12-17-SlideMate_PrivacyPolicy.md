@@ -93,13 +93,13 @@ This policy may be updated due to service or legal changes. Significant updates 
 ---
 
 ## Contact
-- **Developer:** Jinyoung (or your team/company name)
-- **Email:** your-email@example.com
-- **Website:** https://your-github-username.github.io/
+- **Developer:** Jinyoung Song(NickName : Raymond, Freelance)
+- **Email:** gracesjy2000@gmail.com
+- **Website:** https://gracesjy.github.io/hp/
 - **Address (optional):** Add if required for business registration
 
 ---
 
 ## Appendix (Optional)
-- **YouTube Links:** Demo videos may be provided via YouTube. YouTube’s privacy policy applies.
-- **Analytics Tools (if used):** Example: Firebase Crashlytics – for crash diagnostics. If adopted, details will be added here.
+- **YouTube Links:** Demo videos may be provided via YouTube. YouTube’s privacy policy applies.  https://youtube.com/shorts/jRmXBGNLCV8
+- **Analytics Tools (if used):** None
