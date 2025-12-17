@@ -4,6 +4,8 @@
 Install BluetoothManager from the URL below on your PC. <br>
 https://github.com/gracesjy/hp/tree/master/Release/SliteMatePC_Companion/BluetoothManagerSetup.exe
 
+<img src="./HowtoDownload.png">
+
 ### Restrictions
 
 Because Microsoft PowerPoint comes in so many different versions, it's difficult to cover all the previous versions. Current testing is on Windows 11, Office 365.
