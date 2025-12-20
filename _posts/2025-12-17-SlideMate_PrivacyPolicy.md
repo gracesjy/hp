@@ -8,7 +8,12 @@ layout: post
 
 # Privacy Policy for SlideMate
 
-**Last updated:** December 17, 2025
+**Initial: ** December 17, 2025
+**Last updated:** December 20, 2025
+
+## Update History ##
+- December 17, 2025 – Initial version of the Privacy Policy was published.
+- December 20, 2025 – Added a new section on Data Deletion, clarifying that audio recordings stored locally on the device are automatically removed when the application is uninstalled.
 
 ---
 
@@ -89,6 +94,9 @@ This ensures that the Companion operates strictly as a presentation control tool
 
 ## Policy Updates
 This policy may be updated due to service or legal changes. Significant updates will be announced in-app or on this page. Please check the “Last updated” date.
+
+## Data Deletion
+SlideMate may store audio recordings locally on your device if you choose to make voice recordings. These files are not uploaded to any external server and remain only within the app’s storage. When you uninstall the application, all associated audio recordings and related data are automatically deleted from your device. You do not need to take any additional action to remove them.
 
 ---
 
