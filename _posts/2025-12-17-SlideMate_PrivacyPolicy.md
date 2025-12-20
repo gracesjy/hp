@@ -8,7 +8,6 @@ layout: post
 
 # Privacy Policy for SlideMate
 
-**Initial: ** December 17, 2025
 **Last updated:** December 20, 2025
 
 ## Update History ##
