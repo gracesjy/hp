@@ -6,10 +6,11 @@ category: Jekyll
 layout: post
 ---
 
-### Tough Time, but Beautiful Time ~
-I have been working in IT for a long time. However, new technologies have always been pouring out, and I have been making efforts to apply them. It was a difficult but beautiful time. Is this the AI ​​era where we should stop worrying about how to and focus on what to ?
+### My thoughts ~
+In the age of AI, "what to" has become far more important than "how to." The scope of what individuals can accomplish has expanded dramatically. However, the most crucial elements are passion and consistency. These are beyond the scope of AI.
 
 <img src="https://gracesjy.github.io/hp/assets/images/raymond.jpg">
+
 
 
 
