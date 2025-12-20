@@ -95,7 +95,7 @@ This ensures that the Companion operates strictly as a presentation control tool
 This policy may be updated due to service or legal changes. Significant updates will be announced in-app or on this page. Please check the “Last updated” date.
 
 ## Data Deletion
-SlideMate may store audio recordings locally on your device if you choose to make voice recordings. These files are not uploaded to any external server and remain only within the app’s storage. When you uninstall the application, all associated audio recordings and related data are automatically deleted from your device. You do not need to take any additional action to remove them.
+SlideMate may store audio recordings locally on your device if you choose to make voice recordings. These files are not uploaded to any external server and remain only within the app’s storage. You may delete these recordings at any time through the in‑app menu, and when you uninstall the application all associated audio recordings and related data are automatically removed from your device. No additional action is required. Apart from audio recordings, SlideMate does not store or delete any other type of user data.
 
 ---
 
